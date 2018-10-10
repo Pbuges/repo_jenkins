@@ -54,7 +54,7 @@ node {
   stage('3- Récupération des crédentials'){
     withCredentials([
       usernamePassword(
-          credentialsId: 'missing_credential',
+          credentialsId: 'secret_file',
           usernameVariable: "DEMO_USERNAME",
           passwordVariable: "DEMO_PASS"
       ),
