@@ -9,5 +9,6 @@ node {
     }
      stage ('tree'){
         echo "hostname"
+         echo "hostname $env.NOM_VAR"
     }
 }
