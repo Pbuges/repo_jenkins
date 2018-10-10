@@ -59,7 +59,7 @@ node {
           passwordVariable: "DEMO_PASS"
       ),
       file(
-        credentialsId: 'missing_secret_file',
+        credentialsId: 'secret_file',
         variable: 'SECRET_FILE')
     ]){
 
