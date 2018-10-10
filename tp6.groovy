@@ -12,10 +12,19 @@ node {
     echo "$env.NOM_VAR"
   }
   stage ('1- Print all env'){
-    echo 'Affiche toutes les variables environnement disponibles :'
+    withEnv([
+            "ENV_VARIABLE_NAME='value'",
+            "MODE_DEBUG=true",
+          ]){
+// Block de code qui peut
+// utiliser ces variables
+            echo 'Affiche toutes les variables environnement disponibles :'
     sh 'env'
   }
-}
+  }           
+
+    
+}// fin node
 
 //
 // 2 - Paramètres utilisateurs du script
