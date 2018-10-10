@@ -54,7 +54,7 @@ node {
   stage('3- Récupération des crédentials'){
     withCredentials([
       usernamePassword(
-          credentialsId: 'secret_file',
+          credentialsId: 'credential_login_GitHUB',
           usernameVariable: "DEMO_USERNAME",
           passwordVariable: "DEMO_PASS"
       ),
@@ -64,7 +64,9 @@ node {
     ]){
 
       // Affichage des variables :
- 
+ sh 'echo "usernameVariable $DEMO_USERNAME"'
+       sh 'echo "passwordVariable $DEMO_PASS"'
+       sh 'echo "usernameVariable $SECRET_FILE"'
     }
   } // end withCredential, les variables ne sont plus accessibles après
 }
