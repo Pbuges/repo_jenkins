@@ -9,7 +9,7 @@ node {
   }
 
   stage ('1- Print Jenskins variables'){
-    echo "$env.GLOBAL_JENKINS_VARIABLE"
+    echo "$env.NOM_VAR"
   }
   stage ('1- Print all env'){
     echo 'Affiche toutes les variables environnement disponibles :'
