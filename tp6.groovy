@@ -40,7 +40,7 @@ node {
     def value_upper = params.Param_tp6.toUpperCase()
 
     println "Print default => " + params.Param_tp6
-    println "Print default => " + valuue
+    println "Print default => " + value
     println "Print upper case value =>  + value_upper"
 
   }
