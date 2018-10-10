@@ -8,7 +8,6 @@ node {
         echo "joli"
     }
      stage ('tree'){
-        sudo -i
-        hostname
+        echo "titi"
     }
 }
